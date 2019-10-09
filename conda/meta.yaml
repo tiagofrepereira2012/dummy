@@ -21,33 +21,8 @@ requirements:
   run:
     - python
     - setuptools
-    - black >=19
-    - click >=7
-    - click-plugins
-    - conda=4
-    - conda-build=3
-    - conda-verify=3
-    - certifi
-    - docformatter
-    - pytz
-    - python-dateutil
-    - gitpython
-    - python-gitlab
-    - requests
-    - sphinx
-    - pyyaml >=5.1
-    - twine
-    - lxml
-    - jinja2
-    - termcolor
-    - psutil
-    # pin packaging temporarily until
-    # https://github.com/ContinuumIO/anaconda-issues/issues/11236 is fixed.
-    - packaging=19.0
 
 test:
-  requires:
-    - sphinx_rtd_theme
   imports:
     - dummy
   commands:
