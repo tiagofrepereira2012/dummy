@@ -1,11 +1,14 @@
+{% set name = 'dummy' %}
+
 package:
-  name: dummy
+  name: {{ name }}
   version: 0.0.1
 
 build:
   entry_points:
     - dummy_print.py = dummy.dummy:dummy_print
   run_exports:
+    - {{ pin_subpackage(name) }}
   script:
     - cd {{ environ.get('RECIPE_DIR') + '/..' }}
     - python setup.py sdist --formats=zip
@@ -44,6 +47,7 @@ requirements:
 
 test:
   requires:
+    - sphinx_rtd_theme
   imports:
     - dummy
   commands:
