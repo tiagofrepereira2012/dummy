@@ -1,0 +1,32 @@
+package:
+  name: dummy
+  version: 0.0.1
+
+build:
+  entry_points:
+    - dummy_print.py = dummy.dummy:dummy_print
+  run_exports:
+  script:
+    - cd {{ environ.get('RECIPE_DIR') + '/..' }}
+    - python setup.py sdist --formats=zip
+    - python setup.py install --single-version-externally-managed --record record.txt
+
+requirements:
+  host:
+    - python {{ python }}
+    - setuptools {{ setuptools }}
+  run:
+    - python
+    - setuptools
+
+test:
+  requires:
+  imports:
+    - dummy
+  commands:
+    - dummy_print.py
+
+about:
+  license: copyleft
+  summary: Dummy
+  license_family: None

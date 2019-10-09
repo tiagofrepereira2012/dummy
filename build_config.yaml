@@ -1,0 +1,7 @@
+python:
+  - 3.6
+  - 3.7
+
+setuptools:
+  - 41.4.0
+
