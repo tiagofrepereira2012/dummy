@@ -29,7 +29,7 @@ test:
     - dummy_print.py
 
 about:
-  license: copyleft
   summary: Dummy
-  license_family: None
-  license: ../LICENSE
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: ../LICENSE
