@@ -32,3 +32,4 @@ about:
   license: copyleft
   summary: Dummy
   license_family: None
+  license: ../LICENSE
